@@ -59,15 +59,26 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
-  if (color == "blue")
-  {return "This is blue"}
-  else if (color == "red")
-  {return "This is red"}
-  else if (color == "green")
-  {return "This is green"}
-  else if (color == "orange")
-  {return "This is orange"}
-  else {return "Color not found"}
+ var devolucion 
+
+ switch (color) {
+   case "blue": 
+ devolucion = "This is blue"
+ break
+   case "red":
+ devolucion = "This is red"
+ break
+   case "green":
+ devolucion = "This is green"
+ break
+   case "orange":
+ devolucion = "This is orange"
+ break
+  default:
+ devolucion = "Color not found"
+ break;
+ }
+return devolucion
 }
 
 function esDiezOCinco(numero) {
@@ -131,6 +142,15 @@ function esPrimo(numero) {
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
   
+  if (numero < 2) return false;
+  if (numero ===2) return true;
+  for (var i = 2 ; i<numero ; i++) {
+  if (numero % i ===0) {
+  return false;
+}
+  }
+  return true;
+
 }
 
 function esVerdadero(valor){
@@ -163,7 +183,16 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var a = numero
+  var i = 0
 
+  do {
+     i= i + 1
+     a= a + 5
+      }
+
+        while(i<8);
+        return a
 }
 
 
